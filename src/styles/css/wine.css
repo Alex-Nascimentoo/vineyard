@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre&family=Kite+One&family=Great+Vibes&family=Nunito:wght@200&family=Montserrat&display=swap");
+.title-big {
+  text-align: center;
+}
+
+.link {
+  margin-top: 0;
+}
+
+.toscana-content, .cabernet-sauvignon__content, .sauvignon-blanc__content {
+  position: relative;
+  z-index: 100;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.toscana-content .text, .toscana-content .link, .cabernet-sauvignon__content .text, .cabernet-sauvignon__content .link, .sauvignon-blanc__content .text, .sauvignon-blanc__content .link {
+  width: 100%;
+  text-align: right;
+}
+
+.toscana {
+  background-image: url("../../assets/redPlastic.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100vw;
+}
+.toscana-content {
+  min-height: 80vh;
+}
+
+.toscana::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.cabernet-sauvignon {
+  min-height: 100vh;
+  background-image: url("../../assets/grayPlastic.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.cabernet-sauvignon__content {
+  padding: 0;
+}
+
+.cabernet-sauvignon::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 100vh;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.sauvignon-blanc {
+  display: inline-block;
+  min-height: 100vh;
+  width: 100vw;
+  background-image: url("../../assets/champaigne.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.sauvignon-blanc__content {
+  padding: 0;
+}
+.sauvignon-blanc__content .title-big {
+  padding: 0 2rem;
+}
+
+.sauvignon-blanc::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 200vh;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media (min-width: 1010px) {
+  .toscana-content, .cabernet-sauvignon__content, .sauvignon-blanc__content {
+    max-width: 720px;
+  }
+  .cabernet-sauvignon__content > .title {
+    max-width: 100%;
+  }
+}
+
+/*# sourceMappingURL=wine.css.map */

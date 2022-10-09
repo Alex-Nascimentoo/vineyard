@@ -1,0 +1,91 @@
+@use './variables' as *;
+
+.legend, 
+.first-part,
+.second-part {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  min-height: 100vh;
+  width: 100vw;
+
+  &__content {
+    position: relative;
+    z-index: 9;
+  }
+}
+
+.legend::before,
+.first-part::before {
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.first-part::before {
+  top: 100vh;
+}
+
+// Specific styling
+
+.legend {
+  background-image: url('../../assets/redWineGlass.png');
+
+  &__content {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    column-gap: 5rem;
+
+    .title, .text {
+      width: 100%;
+    }
+
+    .text {
+      padding: 0 3rem;
+    }
+
+    .link {
+      color: $clr-text;
+      text-align: center;
+
+      width: 100%;
+
+      position: absolute;
+      bottom: 0;
+    }
+  }
+}
+
+.first-part {
+  background-image: url('../../assets/corks.png');
+
+  &__content {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .first-part__subtitle {
+      margin: -1rem 0 2rem;
+    }
+
+    .text-wrapper {
+      display: flex;
+      column-gap: 3rem;
+    }
+  }
+}
+
+.second-part {
+  background-color: $clr-dark;
+}

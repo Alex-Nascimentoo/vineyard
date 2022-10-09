@@ -1,0 +1,193 @@
+@use './variables' as *;
+
+.hero {
+  min-height: 100vh;
+
+  position: relative;
+
+  background-color: rgb(0, 0, 0);
+  background-image: url('../../assets/bottleByGlass.png');
+  background-position: center;
+  background-size: cover;
+
+  padding: 1em 0;
+
+  .content {
+    position: relative;
+    z-index: 999;
+
+    margin-top: 3.7rem;
+  }
+}
+
+.hero::before {
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 998;
+  top: 0;
+
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.hero__text {
+  padding-left: 20%;
+}
+
+.hero__link {
+  color: $clr-text;
+
+  float: right;
+}
+
+.big-link {
+  display: none;
+}
+
+.story {
+  min-height: 100vh;
+  background-color: $clr-dark;
+
+  padding: 2em 0;
+
+  text-align: center;
+
+  &__title {
+    margin: 0 auto;
+  }
+
+  &__subtitle {
+    margin: -.5em 0 0;
+  }
+
+  &__text, &__link {
+    text-align: left;
+    
+    width: 100%;
+    display: inline-block;
+  }
+
+  &__link {
+    margin-top: 0;
+  }
+
+  .barrel {
+    margin: 0 50% 2rem 0;
+  }
+
+  .white-wine {
+    margin-top: 2rem;
+
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.project {
+  position: relative;
+  z-index: 9;
+  min-height: 100vh;
+
+  background-image: url('../../assets/glasses.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding-top: 20vh;
+
+  h1, p, a {
+    position: relative;
+    z-index: 100;
+  }
+
+}
+
+.project::before {
+  content: '';
+  min-height: 100%;
+  width: 100%;
+  top: 0;
+
+  position: absolute;
+  z-index: 99;
+
+  background-image: linear-gradient(0deg, black, transparent);;
+}
+
+@media (min-width: 1010px) {
+  .content {
+    display: flex;
+
+    padding-top: 20vh;
+  
+    .title-box, .call-to-action {
+      width: 100%;
+    }
+
+    .title-box {
+      display: flex;
+      flex-direction: column;
+    };
+
+    .hero__text {
+      margin: 0;
+      padding: 0;
+    }
+
+    .hero__link {
+      bottom: 0;
+      position: absolute;
+    }
+
+    .big-link {
+      display: inline-block;
+
+      text-align: left;
+    }
+
+    .small-link {
+      display: none;
+    }
+  }
+
+  .story {
+    padding-top: 5rem;
+
+    .barrel {
+      float: left;
+      margin: 0;
+    }
+
+    &__title {
+      padding-top: 3rem;
+    }
+
+    &__subtitle {
+      width: min-content;
+      margin: -1.3rem auto 5rem;
+    }
+
+    .col, .white-wine {
+      width: 50%;
+      display: inline-block;
+    }
+
+    &__text {
+      margin-bottom: 4rem;
+    }
+
+  }
+
+  .project {
+    padding-top: 27vh;
+
+    &__title {
+      max-width: 50%;
+    }
+
+    &__text {
+      max-width: 40%;
+    }
+  }
+}

@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre&family=Kite+One&family=Great+Vibes&family=Nunito:wght@200&family=Montserrat&display=swap");
+.legend,
+.first-part,
+.second-part {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100vw;
+}
+.legend__content,
+.first-part__content,
+.second-part__content {
+  position: relative;
+  z-index: 9;
+}
+
+.legend::before,
+.first-part::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.first-part::before {
+  top: 100vh;
+}
+
+.legend {
+  background-image: url("../../assets/redWineGlass.png");
+}
+.legend__content {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  column-gap: 5rem;
+}
+.legend__content .title, .legend__content .text {
+  width: 100%;
+}
+.legend__content .text {
+  padding: 0 3rem;
+}
+.legend__content .link {
+  color: #CECBC8;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.first-part {
+  background-image: url("../../assets/corks.png");
+}
+.first-part__content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.first-part__content .first-part__subtitle {
+  margin: -1rem 0 2rem;
+}
+.first-part__content .text-wrapper {
+  display: flex;
+  column-gap: 3rem;
+}
+
+.second-part {
+  background-color: #28221E;
+}
+
+/*# sourceMappingURL=story.css.map */

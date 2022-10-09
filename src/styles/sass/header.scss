@@ -1,0 +1,28 @@
+@use './variables' as *;
+
+header {
+  position: relative;
+  z-index: 999;
+
+  padding-inline: 2em .9em;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  color: $clr-text;
+  font-family: 'Nunito', sans-serif;
+}
+
+.menu {
+  width: .9em;
+
+  cursor: pointer;
+}
+
+.logo {
+  margin: 0 auto;
+  font-family: $ff-logo;
+  font-size: $mobile-title-regular;
+  font-weight: 100;
+}
