@@ -3,6 +3,8 @@ import React from 'react'
 import Header from '../components/Header'
 import '../styles/css/story.css'
 
+import woman from '../assets/woman.png'
+
 function Story() {
   return (
     <>
@@ -31,7 +33,19 @@ function Story() {
       </section>
 
       <section className="second-part">
-        <div className="container second-part__content"></div>
+        <div className="container second-part__content">
+          <h1 className="title">SECOND PART</h1>
+          <p className="subtitle second-part__subtitle">The Dedication</p>
+
+          <div className="text-wrapper">
+            <img src={woman} alt="woman" className='woman-pic' />
+
+            <p className='text woman-text'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, optio nisi, cupiditate quasi aperiam vel alias minus, eum aspernatur nobis voluptatum asperiores cumque repellendus laudantium quis veniam id ut dignissimos?
+            <br /> <br />
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet neque architecto odio enim eligendi quia itaque, numquam molestiae? Eos vitae necessitatibus sunt facere tenetur maiores libero beatae incidunt eveniet ea!
+            </p>
+          </div>
+        </div>
       </section>
     </>
   )
